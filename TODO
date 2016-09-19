@@ -1,0 +1,34 @@
+--RENDERING
+-add color parameters [done]
+-add color to render [done]
+-rewrite space ship render [done]
+-rewrite design generate [done]
+
+--BEHAVIOR
+-debug flocking [done]
+-add topo wraparound [no need?]
+
+--CONTROLS
+-add ship [done]
+-split render and move direction [done]
+-add ship controls [SDL] <--- I'm here -GS
+ 
+
+-add bullet [done]
+-add auto fire [done]
+-add bullet kill method [done]
+
+--FINAL
+-add badguy fire method
+-add flock min distance
+-background?
+-rewrite staging animation
+-skinner this ish
+
+
+--TO COMPILE
+
+--LINUX
+$ g++ badguy.cpp bullet.cpp shield.cpp leveldesigner.cpp quaternion.cpp quaternionlib.cpp goodguy.cpp -o quaternion -lGL -lGLU -lglut -L/usr/local -std=c++11
+
+--????
