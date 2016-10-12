@@ -2,66 +2,83 @@
 #define MENUDESIGNER_H
 #include <vector>
 #include <ctime>
-#include "goodguy.h" //should only need goodguy, maybe leveldesigner
+#include "button.h"
+#include "levelstats.cpp"
 using namespace std;
 
 class MenuDesigner{
 public:
-    int progression; //tracks user progress thru game ("tier" of nodes), to scale difficulty
-    //isn't needed since we can code this into nodes themselves
+    int progression;
     int questsComplete;
     int bossesBeat;
     int portalsPassed; //probably should just be per-node, rather than persistent
     int playerMoneys; //better to put this elsewhere i think
-
-
-    //but maybe people like to know that stat!
-
-    /*
-    two parts of the menuDesigner:
-        1) upgrades/store (as one thing)
-        2) path map
-    these can appear at once, or with a state-swap "tabs" type setup
-    */
-
-    //vector<Level *> nodes;
-    //"level *" just describes some struct of seeds to give to leveldesigner
-    //Level * currentNode;
-
-    //some references to a data-type containing our total inventory of possible "items" n shit
-    //"items" are just bullet dmg/speed upgrades and new bullet types for the player
-    //check in with me if you need to know how this looks from a design perspective
-    //very likely a counter is the better way to go for anything except for bullet types
-    //though maybe we implement boosters and other mobility-oriented things, warpers ("flash" from LoL), etc.
-
-    //maybe the player's actual "inventory", you pick where that goes tho
-    //some vector of the buttons you can press i guess
+    vector<Button> menuButtons;
+    vector<TextBox>
+    vector<LevelStat> nodeStats;
+    map<int,vector<int> > nodeGraph;
     /**
-        Function to render the menu
+        Fuction to call the renderer for the current state of the menu
         @param void
-        @reuturn void
+        @param void
     */
     void render();
     /**
+        @param x1 the x coordinate of the top left corner of the button
+        @param y1 the y coordinate of the top left corner of the button
+        @param x2 the x coordinate of the bottom right corner of the button
+        @param y2 the y coordinate of the bottom right corner of the button
+        @param buttonText the text displayed on the button
+        @param style the style the button should be rendered in
     */
-    void addMenuButton();
-    void getMenuButton();
-    void highlight(); //changes a value in a struct or something, basically for "onmousehover" button highlighting
-    int onMenuHover(); //some "where is the mouse" type shit
-    int onMenuClick(); //above + onMouseDown()
-    //obviously per-frame we call
-
-    //some getShipStats or getPlayerStats thing, i don't think we need anything here because we have the goodguy class...w/e
-    int initMap(); //creates node-map for gameplay, with seeds n shit, returns success bool
-    void execLevel(); //sets up level initial shit, then starts the level
-
-    void getQuestStats(); //gets info about user quest data from levels
-    //prob also an "int isQuestComplete" type thing
-    void generateReward(); //generates what rewards the user should gets
-    void rewardPlayer(); //actually give the player the reward
-    void initQuestResponse(); //generates message for quest completion, and reward
-
-    void generateTextWindow(); //exactly what it sounds like, should be "over" the main menu
-    void closeTextWindow(); //on click of an "ok" button
-
+    void addMenuButton(double x1, double y1, double x2, double y2, string buttonText, int style);
+    /**
+        Function to set a button's on-hover function
+        @param btn a pointer to the button to modify
+        @param onHoverFunc the function to execute when the mouse hovers over
+        btn
+        @return void
+    */
+    void onButtonHover(Button * btn, int (*onHoverFunc));
+    /**
+        Function to set a button's on-click function
+        @param btn a pointer to the button to modify
+        @param onClickFunc the function to execute when the mouse clicks on btn
+        @return void
+    */
+    void onButtonClick(Button btn, int (*onClickFunc));
+    /**
+        Function to generate a map for the rest of the game to occur on
+        @param void
+        @param void
+    */
+    void initMap();
+    /**
+        Begin level, should transfer control to level designer
+        @param void
+        @reutrn void
+    */
+    void execLevel();
+    /**
+        Access LevelStats for a given node
+        @param i the index of the level from which to read
+        @return a copy of the seed information about the level
+    */
+    LevelStats getQuestStats(int i);
+    /**
+        Function to add a text window to the menu
+        @param x1 the x coordinate of the top left corner of the text box
+        @param y1 the y coordinate of the top left corner of the tect box
+        @param x2 the x coordinate of the bottom right corner of the text box
+        @param y2 the y coordinate of the bottom right corner of the text box
+        @param text the text displayed on the test box
+        @param style the style in which the text box should be rendered
+    */
+    void generateTextWindow((double x1, double y1, double x2, double y2, string buttonText, int style););
+    /**
+        Function to close a text window by a given index
+        @param void
+        @param void
+    */
+    void closeTextWindow();
 }

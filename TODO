@@ -18,8 +18,12 @@
 -add bullet kill method [done]
 
 --HOUSEKEEPING
--finish documenting menudesigner.h 
+-finish documenting menudesigner.h [done]
+-add button.h
+-write menudesigner.cpp
+-write button.cpp
 -write Makefile
+-write LevelStats.cpp
 -write Doxyfile
 
 --FINAL
