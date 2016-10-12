@@ -11,12 +11,16 @@
 --CONTROLS
 -add ship [done]
 -split render and move direction [done]
--add ship controls [SDL] <--- I'm here -GS
- 
+-add ship controls [SDL]
 
 -add bullet [done]
 -add auto fire [done]
 -add bullet kill method [done]
+
+--HOUSEKEEPING
+-finish documenting menudesigner.h 
+-write Makefile
+-write Doxyfile
 
 --FINAL
 -add badguy fire method
@@ -30,5 +34,3 @@
 
 --LINUX
 $ g++ badguy.cpp bullet.cpp shield.cpp leveldesigner.cpp quaternion.cpp quaternionlib.cpp goodguy.cpp -o quaternion -lGL -lGLU -lglut -L/usr/local -std=c++11
-
---????
