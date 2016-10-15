@@ -1,0 +1,464 @@
+\hypertarget{classBadguy}{\section{Badguy Class Reference}
+\label{classBadguy}\index{Badguy@{Badguy}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classBadguy_a5aeb8242245e226fd9ce7fb3d9f3caf4}{Badguy} ()
+\item 
+\hyperlink{classBadguy_a90c8f82677f3485457bb2ab5f53f2193}{Badguy} (double \hyperlink{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}{x}, double \hyperlink{classBadguy_a59cb0a80da16789d9b89b1a94230c2a5}{y}, double theta)
+\item 
+double \hyperlink{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}{x} ()
+\item 
+double \hyperlink{classBadguy_a59cb0a80da16789d9b89b1a94230c2a5}{y} ()
+\item 
+double \hyperlink{classBadguy_a846380bfe1c2b6528ae6e89491221671}{get\-Direction} ()
+\item 
+void \hyperlink{classBadguy_ad3d863742530fde5f17fd1b780954ff1}{set\-X} (double \hyperlink{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}{x})
+\item 
+void \hyperlink{classBadguy_aedf01c1f221dbff7b96e11ee16eabfa7}{set\-Y} (double \hyperlink{classBadguy_a59cb0a80da16789d9b89b1a94230c2a5}{y})
+\item 
+double \hyperlink{classBadguy_a313dc415515619098696131a95e4ed1d}{get\-Hit\-Radius} ()
+\item 
+void \hyperlink{classBadguy_a51f9fae76876a18c1904a757639d9837}{set\-Direction} (double theta)
+\item 
+void \hyperlink{classBadguy_a93937e2b70f6fd6ed6405dbbc97d4105}{set\-Step\-Size} (double \hyperlink{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}{x})
+\item 
+void \hyperlink{classBadguy_a27efb0318dfd8c5a5f486142e6ade4dc}{set\-Color} (vector$<$ double $>$ c)
+\item 
+void \hyperlink{classBadguy_a25a22bf95f477efa88dd2cb5f2743897}{set\-Sprite\-Data} (vector$<$ vector$<$ bool $>$ $>$ dat1, vector$<$ vector$<$ vector$<$ double $>$ $>$ $>$ dat2)
+\item 
+void \hyperlink{classBadguy_a4b2e8038d368688ce8a389fbd6b00790}{render} ()
+\item 
+void \hyperlink{classBadguy_ad974276dd33316dbe14d089f219222ac}{forwardmove} (double d)
+\item 
+void \hyperlink{classBadguy_af2cd3578e0c4a388fc9d08feec3a13f4}{flockmove} (vector$<$ \hyperlink{classBadguy}{Badguy} $\ast$ $>$ flock, double d)
+\item 
+void \hyperlink{classBadguy_a659925e76c4521b5238413647cf29d8b}{trackmove} (double \hyperlink{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}{x}, double \hyperlink{classBadguy_a59cb0a80da16789d9b89b1a94230c2a5}{y}, double d)
+\item 
+void \hyperlink{classBadguy_afc6cee672537ef4bfec947851c86b555}{directionandmove} (double theta, double d)
+\item 
+void \hyperlink{classBadguy_a38accc6d49c10915c9d3d33d9a1900e6}{flee} (double d)
+\item 
+vector$<$ double $>$ \hyperlink{classBadguy_aa0010353f16911f941736c94485c9ce3}{fireforward} ()
+\item 
+vector$<$ vector$<$ double $>$ $>$ \hyperlink{classBadguy_a8a62d81d53b6c2070dcf989a2c171e89}{firecircle} (int \hyperlink{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}{x})
+\item 
+vector$<$ vector$<$ double $>$ $>$ \hyperlink{classBadguy_a910bacea93b61c243bddd0312f19d5a1}{firecircle} (int \hyperlink{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}{x}, double d)
+\item 
+vector$<$ double $>$ \hyperlink{classBadguy_a037e7399898c5de7e991f8299181062e}{firedirect} (int goodguyx, int goodguyy)
+\item 
+void \hyperlink{classBadguy_a2d3f37d991cccc2870f93de58c57a265}{checkonscreen} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBadguy_a5b25175842255733ad21172c9e6cc0de}{double {\bfseries shipx}}\label{classBadguy_a5b25175842255733ad21172c9e6cc0de}
+
+\item 
+\hypertarget{classBadguy_a8a47ed4203405e2f4b8178786b6cb883}{double {\bfseries shipy}}\label{classBadguy_a8a47ed4203405e2f4b8178786b6cb883}
+
+\item 
+\hypertarget{classBadguy_afaddfa335d801e4dccf9ac9af0dd0408}{double {\bfseries direction}}\label{classBadguy_afaddfa335d801e4dccf9ac9af0dd0408}
+
+\item 
+\hypertarget{classBadguy_a221b761b3607d2277efdb2484224728a}{double {\bfseries sightdistance}}\label{classBadguy_a221b761b3607d2277efdb2484224728a}
+
+\item 
+\hypertarget{classBadguy_ab4d1d68fb96c348faed8caf7433172ef}{double {\bfseries stepsize}}\label{classBadguy_ab4d1d68fb96c348faed8caf7433172ef}
+
+\item 
+\hypertarget{classBadguy_a307731a21843c98b6185d2f6f9da97ae}{double {\bfseries pixsize}}\label{classBadguy_a307731a21843c98b6185d2f6f9da97ae}
+
+\item 
+\hypertarget{classBadguy_aed3147567f8260693f39dd737d5b82de}{double {\bfseries hitradius}}\label{classBadguy_aed3147567f8260693f39dd737d5b82de}
+
+\item 
+\hypertarget{classBadguy_aab6b8f7a3e66f5c4c9acce0199002825}{bool {\bfseries is\-Alive}}\label{classBadguy_aab6b8f7a3e66f5c4c9acce0199002825}
+
+\item 
+\hypertarget{classBadguy_ab2a688604b4e8d709f322bcc542e4264}{vector$<$ double $>$ {\bfseries color}}\label{classBadguy_ab2a688604b4e8d709f322bcc542e4264}
+
+\item 
+\hypertarget{classBadguy_a465fe0cbdec160eded51497821a6bc43}{vector$<$ vector$<$ bool $>$ $>$ {\bfseries spriteshape}}\label{classBadguy_a465fe0cbdec160eded51497821a6bc43}
+
+\item 
+\hypertarget{classBadguy_a5244515f0cfec042cbe6802ebdaf0c9b}{vector$<$ vector$<$ vector$<$ double $>$ $>$ $>$ {\bfseries spriteskin}}\label{classBadguy_a5244515f0cfec042cbe6802ebdaf0c9b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classBadguy_a5aeb8242245e226fd9ce7fb3d9f3caf4}{\index{Badguy@{Badguy}!Badguy@{Badguy}}
+\index{Badguy@{Badguy}!Badguy@{Badguy}}
+\subsubsection[{Badguy}]{\setlength{\rightskip}{0pt plus 5cm}Badguy\-::\-Badguy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a5aeb8242245e226fd9ce7fb3d9f3caf4}
+Default constructor, to override in subclasses 
+\begin{DoxyParams}{Parameters}
+{\em void} & a pointer to a \hyperlink{classBadguy}{Badguy} object \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBadguy_a90c8f82677f3485457bb2ab5f53f2193}{\index{Badguy@{Badguy}!Badguy@{Badguy}}
+\index{Badguy@{Badguy}!Badguy@{Badguy}}
+\subsubsection[{Badguy}]{\setlength{\rightskip}{0pt plus 5cm}Badguy\-::\-Badguy (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a90c8f82677f3485457bb2ab5f53f2193}
+Constructor with iitial parameters 
+\begin{DoxyParams}{Parameters}
+{\em x} & the initial x-\/position \\
+\hline
+{\em y} & the initial y-\/position \\
+\hline
+{\em theta} & the intial direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to a \hyperlink{classBadguy}{Badguy} object 
+\end{DoxyReturn}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classBadguy_a2d3f37d991cccc2870f93de58c57a265}{\index{Badguy@{Badguy}!checkonscreen@{checkonscreen}}
+\index{checkonscreen@{checkonscreen}!Badguy@{Badguy}}
+\subsubsection[{checkonscreen}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::checkonscreen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a2d3f37d991cccc2870f93de58c57a265}
+Check that the ship is on screen and teleport it if neccesary 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_afc6cee672537ef4bfec947851c86b555}{\index{Badguy@{Badguy}!directionandmove@{directionandmove}}
+\index{directionandmove@{directionandmove}!Badguy@{Badguy}}
+\subsubsection[{directionandmove}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::directionandmove (
+\begin{DoxyParamCaption}
+\item[{double}]{theta, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_afc6cee672537ef4bfec947851c86b555}
+Implement drunken walk, given the amount of time that has passed 
+\begin{DoxyParams}{Parameters}
+{\em theta} & the direction to move \\
+\hline
+{\em d} & the aount of time that has passed in seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a8a62d81d53b6c2070dcf989a2c171e89}{\index{Badguy@{Badguy}!firecircle@{firecircle}}
+\index{firecircle@{firecircle}!Badguy@{Badguy}}
+\subsubsection[{firecircle}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<$ double $>$ $>$ Badguy\-::firecircle (
+\begin{DoxyParamCaption}
+\item[{int}]{x}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a8a62d81d53b6c2070dcf989a2c171e89}
+T\-O\-D\-O optimize implementation Generated the arguments to generate Bullets fired in all directions 
+\begin{DoxyParams}{Parameters}
+{\em x} & number of bullets to fire at a time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of bullet data (inital x, initial y, direction) 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a910bacea93b61c243bddd0312f19d5a1}{\index{Badguy@{Badguy}!firecircle@{firecircle}}
+\index{firecircle@{firecircle}!Badguy@{Badguy}}
+\subsubsection[{firecircle}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ vector$<$ double $>$ $>$ Badguy\-::firecircle (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a910bacea93b61c243bddd0312f19d5a1}
+T\-O\-D\-O optimize implementation Generated the arguments to generate Bullets fired in all directions 
+\begin{DoxyParams}{Parameters}
+{\em x} & number of bullets to fire at a time \\
+\hline
+{\em d} & radial offset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+array of bullet data (inital x, initial y, direction) 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a037e7399898c5de7e991f8299181062e}{\index{Badguy@{Badguy}!firedirect@{firedirect}}
+\index{firedirect@{firedirect}!Badguy@{Badguy}}
+\subsubsection[{firedirect}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Badguy\-::firedirect (
+\begin{DoxyParamCaption}
+\item[{int}]{goodguyx, }
+\item[{int}]{goodguyy}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a037e7399898c5de7e991f8299181062e}
+Generates bullet data for a bullet shot at (x, y) target given 
+\begin{DoxyParams}{Parameters}
+{\em x} & first argument of target position \\
+\hline
+{\em y} & second argument of the target position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the data needed to make a bullet (inital x, initial y, direction) 
+\end{DoxyReturn}
+\hypertarget{classBadguy_aa0010353f16911f941736c94485c9ce3}{\index{Badguy@{Badguy}!fireforward@{fireforward}}
+\index{fireforward@{fireforward}!Badguy@{Badguy}}
+\subsubsection[{fireforward}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Badguy\-::fireforward (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_aa0010353f16911f941736c94485c9ce3}
+Generates arguments to generate a \hyperlink{classBullet}{Bullet} fired foward 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the data needed to make a bullet (inital x, initial y, direction) 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a38accc6d49c10915c9d3d33d9a1900e6}{\index{Badguy@{Badguy}!flee@{flee}}
+\index{flee@{flee}!Badguy@{Badguy}}
+\subsubsection[{flee}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::flee (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a38accc6d49c10915c9d3d33d9a1900e6}
+Run away once the stage or level is over given an amaount of time that has passed 
+\begin{DoxyParams}{Parameters}
+{\em d} & the amount of time that has passed in seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_af2cd3578e0c4a388fc9d08feec3a13f4}{\index{Badguy@{Badguy}!flockmove@{flockmove}}
+\index{flockmove@{flockmove}!Badguy@{Badguy}}
+\subsubsection[{flockmove}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::flockmove (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Badguy} $\ast$ $>$}]{flock, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_af2cd3578e0c4a388fc9d08feec3a13f4}
+Implements Reynold's flock model, moves ship in with flock, given the amount of time that has passed 
+\begin{DoxyParams}{Parameters}
+{\em flock} & the other bad guys in the flock \\
+\hline
+{\em d} & the aount of time that has passed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_ad974276dd33316dbe14d089f219222ac}{\index{Badguy@{Badguy}!forwardmove@{forwardmove}}
+\index{forwardmove@{forwardmove}!Badguy@{Badguy}}
+\subsubsection[{forwardmove}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::forwardmove (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_ad974276dd33316dbe14d089f219222ac}
+Moves the ship forward given the amount of time that 
+\begin{DoxyParams}{Parameters}
+{\em d} & the amount of time that has passed in seconds \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a846380bfe1c2b6528ae6e89491221671}{\index{Badguy@{Badguy}!get\-Direction@{get\-Direction}}
+\index{get\-Direction@{get\-Direction}!Badguy@{Badguy}}
+\subsubsection[{get\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}double Badguy\-::get\-Direction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a846380bfe1c2b6528ae6e89491221671}
+Get the ship's direction 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the ships direction in radians 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a313dc415515619098696131a95e4ed1d}{\index{Badguy@{Badguy}!get\-Hit\-Radius@{get\-Hit\-Radius}}
+\index{get\-Hit\-Radius@{get\-Hit\-Radius}!Badguy@{Badguy}}
+\subsubsection[{get\-Hit\-Radius}]{\setlength{\rightskip}{0pt plus 5cm}double Badguy\-::get\-Hit\-Radius (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a313dc415515619098696131a95e4ed1d}
+Get the hit radius of a badguy ship 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the hit radius 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a4b2e8038d368688ce8a389fbd6b00790}{\index{Badguy@{Badguy}!render@{render}}
+\index{render@{render}!Badguy@{Badguy}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a4b2e8038d368688ce8a389fbd6b00790}
+Renders the ship using G\-L\-U\-T 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a27efb0318dfd8c5a5f486142e6ade4dc}{\index{Badguy@{Badguy}!set\-Color@{set\-Color}}
+\index{set\-Color@{set\-Color}!Badguy@{Badguy}}
+\subsubsection[{set\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::set\-Color (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{c}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a27efb0318dfd8c5a5f486142e6ade4dc}
+Set to color of the ship 
+\begin{DoxyParams}{Parameters}
+{\em c} & the R\-G\-B vector as doubles \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a51f9fae76876a18c1904a757639d9837}{\index{Badguy@{Badguy}!set\-Direction@{set\-Direction}}
+\index{set\-Direction@{set\-Direction}!Badguy@{Badguy}}
+\subsubsection[{set\-Direction}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::set\-Direction (
+\begin{DoxyParamCaption}
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a51f9fae76876a18c1904a757639d9837}
+Set the direction of the ship 
+\begin{DoxyParams}{Parameters}
+{\em theta} & the new direction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a25a22bf95f477efa88dd2cb5f2743897}{\index{Badguy@{Badguy}!set\-Sprite\-Data@{set\-Sprite\-Data}}
+\index{set\-Sprite\-Data@{set\-Sprite\-Data}!Badguy@{Badguy}}
+\subsubsection[{set\-Sprite\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::set\-Sprite\-Data (
+\begin{DoxyParamCaption}
+\item[{vector$<$ vector$<$ bool $>$ $>$}]{dat1, }
+\item[{vector$<$ vector$<$ vector$<$ double $>$ $>$ $>$}]{dat2}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a25a22bf95f477efa88dd2cb5f2743897}
+Set the spriteshape 
+\begin{DoxyParams}{Parameters}
+{\em dat} & the new sprite \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a93937e2b70f6fd6ed6405dbbc97d4105}{\index{Badguy@{Badguy}!set\-Step\-Size@{set\-Step\-Size}}
+\index{set\-Step\-Size@{set\-Step\-Size}!Badguy@{Badguy}}
+\subsubsection[{set\-Step\-Size}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::set\-Step\-Size (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a93937e2b70f6fd6ed6405dbbc97d4105}
+Set the stepsize of the ship 
+\begin{DoxyParams}{Parameters}
+{\em x} & the new stepsize \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_ad3d863742530fde5f17fd1b780954ff1}{\index{Badguy@{Badguy}!set\-X@{set\-X}}
+\index{set\-X@{set\-X}!Badguy@{Badguy}}
+\subsubsection[{set\-X}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::set\-X (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_ad3d863742530fde5f17fd1b780954ff1}
+Set the x coordiate of the ship 
+\begin{DoxyParams}{Parameters}
+{\em x} & the new coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_aedf01c1f221dbff7b96e11ee16eabfa7}{\index{Badguy@{Badguy}!set\-Y@{set\-Y}}
+\index{set\-Y@{set\-Y}!Badguy@{Badguy}}
+\subsubsection[{set\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::set\-Y (
+\begin{DoxyParamCaption}
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_aedf01c1f221dbff7b96e11ee16eabfa7}
+Set the y coordinate of the ship 
+\begin{DoxyParams}{Parameters}
+{\em y} & the new coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a659925e76c4521b5238413647cf29d8b}{\index{Badguy@{Badguy}!trackmove@{trackmove}}
+\index{trackmove@{trackmove}!Badguy@{Badguy}}
+\subsubsection[{trackmove}]{\setlength{\rightskip}{0pt plus 5cm}void Badguy\-::trackmove (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a659925e76c4521b5238413647cf29d8b}
+Broken, moves ship toward point (x, y) 
+\begin{DoxyParams}{Parameters}
+{\em x} & first argument of target position \\
+\hline
+{\em y} & second argument of the target position \\
+\hline
+{\em } & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}{\index{Badguy@{Badguy}!x@{x}}
+\index{x@{x}!Badguy@{Badguy}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double Badguy\-::x (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_ab68f48d60da3630aeb3b0a8e6080acce}
+Get the ship's x postition 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an x positon 
+\end{DoxyReturn}
+\hypertarget{classBadguy_a59cb0a80da16789d9b89b1a94230c2a5}{\index{Badguy@{Badguy}!y@{y}}
+\index{y@{y}!Badguy@{Badguy}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}double Badguy\-::y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classBadguy_a59cb0a80da16789d9b89b1a94230c2a5}
+Get the ship's y postition 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a y position 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+badguy.\-h\item 
+badguy.\-cpp\end{DoxyCompactItemize}

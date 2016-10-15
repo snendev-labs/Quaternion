@@ -1,0 +1,214 @@
+\hypertarget{classMenuDesigner}{\section{Menu\-Designer Class Reference}
+\label{classMenuDesigner}\index{Menu\-Designer@{Menu\-Designer}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classMenuDesigner_a63784951606d0ec88120c9c47e83462f}{render} ()
+\item 
+void \hyperlink{classMenuDesigner_a359ccfa2b2484c0e413383c5a41ffb7d}{add\-Menu\-Button} (double x1, double y1, double x2, double y2, string button\-Text, int style)
+\item 
+void \hyperlink{classMenuDesigner_ad6a4d772a6462ceada64550f1c02558b}{on\-Button\-Hover} (Button $\ast$btn, int($\ast$on\-Hover\-Func))
+\item 
+void \hyperlink{classMenuDesigner_a73a5d6f98ed1148d58b3a4185683668f}{on\-Button\-Click} (Button btn, int($\ast$on\-Click\-Func))
+\item 
+void \hyperlink{classMenuDesigner_a55338cb6b43967e2d17714daa5dff4d8}{init\-Map} ()
+\item 
+void \hyperlink{classMenuDesigner_a061b72db0f19efa0f59b9b9f8d9c28d8}{exec\-Level} ()
+\item 
+Level\-Stats \hyperlink{classMenuDesigner_ae7d90855892b5315f15c60ff26dbb262}{get\-Quest\-Stats} (int i)
+\item 
+void \hyperlink{classMenuDesigner_abfc968d082802dad003fc94a075e034c}{generate\-Text\-Window} ((double x1, double y1, double x2, double y2, string button\-Text, int style);)
+\item 
+void \hyperlink{classMenuDesigner_ac92c5eea18112122bdde8897d4576d0b}{close\-Text\-Window} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMenuDesigner_ae0a144e59f8609c5884b75cbaf0fc25e}{int {\bfseries progression}}\label{classMenuDesigner_ae0a144e59f8609c5884b75cbaf0fc25e}
+
+\item 
+\hypertarget{classMenuDesigner_a3bd284998e574f65f2533ad42daa775c}{int {\bfseries quests\-Complete}}\label{classMenuDesigner_a3bd284998e574f65f2533ad42daa775c}
+
+\item 
+\hypertarget{classMenuDesigner_a92540ef5037bf88d8e7588654fd90602}{int {\bfseries bosses\-Beat}}\label{classMenuDesigner_a92540ef5037bf88d8e7588654fd90602}
+
+\item 
+\hypertarget{classMenuDesigner_af6704c0a01341b0b267113e6ea4d5935}{int {\bfseries portals\-Passed}}\label{classMenuDesigner_af6704c0a01341b0b267113e6ea4d5935}
+
+\item 
+\hypertarget{classMenuDesigner_a2e0402f6622f7d42e8bedc4a109265c9}{int {\bfseries player\-Moneys}}\label{classMenuDesigner_a2e0402f6622f7d42e8bedc4a109265c9}
+
+\item 
+\hypertarget{classMenuDesigner_aad1760890b60a8b191d60c4746c63c0f}{vector$<$ Button $>$ {\bfseries menu\-Buttons}}\label{classMenuDesigner_aad1760890b60a8b191d60c4746c63c0f}
+
+\item 
+\hypertarget{classMenuDesigner_a82765bc6caef9839312e0a30dce729fb}{vector$<$ Text\-Box $>$ vector\\*
+$<$ Level\-Stat $>$ {\bfseries node\-Stats}}\label{classMenuDesigner_a82765bc6caef9839312e0a30dce729fb}
+
+\item 
+\hypertarget{classMenuDesigner_afcaf6fd573988356b45f3a43725fdaae}{map$<$ int, vector$<$ int $>$ $>$ {\bfseries node\-Graph}}\label{classMenuDesigner_afcaf6fd573988356b45f3a43725fdaae}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classMenuDesigner_a359ccfa2b2484c0e413383c5a41ffb7d}{\index{Menu\-Designer@{Menu\-Designer}!add\-Menu\-Button@{add\-Menu\-Button}}
+\index{add\-Menu\-Button@{add\-Menu\-Button}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{add\-Menu\-Button}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Designer\-::add\-Menu\-Button (
+\begin{DoxyParamCaption}
+\item[{double}]{x1, }
+\item[{double}]{y1, }
+\item[{double}]{x2, }
+\item[{double}]{y2, }
+\item[{string}]{button\-Text, }
+\item[{int}]{style}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_a359ccfa2b2484c0e413383c5a41ffb7d}
+
+\begin{DoxyParams}{Parameters}
+{\em x1} & the x coordinate of the top left corner of the button \\
+\hline
+{\em y1} & the y coordinate of the top left corner of the button \\
+\hline
+{\em x2} & the x coordinate of the bottom right corner of the button \\
+\hline
+{\em y2} & the y coordinate of the bottom right corner of the button \\
+\hline
+{\em button\-Text} & the text displayed on the button \\
+\hline
+{\em style} & the style the button should be rendered in \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMenuDesigner_ac92c5eea18112122bdde8897d4576d0b}{\index{Menu\-Designer@{Menu\-Designer}!close\-Text\-Window@{close\-Text\-Window}}
+\index{close\-Text\-Window@{close\-Text\-Window}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{close\-Text\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Designer\-::close\-Text\-Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_ac92c5eea18112122bdde8897d4576d0b}
+Function to close a text window by a given index 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMenuDesigner_a061b72db0f19efa0f59b9b9f8d9c28d8}{\index{Menu\-Designer@{Menu\-Designer}!exec\-Level@{exec\-Level}}
+\index{exec\-Level@{exec\-Level}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{exec\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Designer\-::exec\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_a061b72db0f19efa0f59b9b9f8d9c28d8}
+Begin level, should transfer control to level designer 
+\begin{DoxyParams}{Parameters}
+{\em void} & void \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMenuDesigner_abfc968d082802dad003fc94a075e034c}{\index{Menu\-Designer@{Menu\-Designer}!generate\-Text\-Window@{generate\-Text\-Window}}
+\index{generate\-Text\-Window@{generate\-Text\-Window}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{generate\-Text\-Window}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Designer\-::generate\-Text\-Window (
+\begin{DoxyParamCaption}
+\item[{(double x1, double y1, double x2, double y2, string button\-Text, int style);}]{}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_abfc968d082802dad003fc94a075e034c}
+Function to add a text window to the menu 
+\begin{DoxyParams}{Parameters}
+{\em x1} & the x coordinate of the top left corner of the text box \\
+\hline
+{\em y1} & the y coordinate of the top left corner of the tect box \\
+\hline
+{\em x2} & the x coordinate of the bottom right corner of the text box \\
+\hline
+{\em y2} & the y coordinate of the bottom right corner of the text box \\
+\hline
+{\em text} & the text displayed on the test box \\
+\hline
+{\em style} & the style in which the text box should be rendered \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMenuDesigner_ae7d90855892b5315f15c60ff26dbb262}{\index{Menu\-Designer@{Menu\-Designer}!get\-Quest\-Stats@{get\-Quest\-Stats}}
+\index{get\-Quest\-Stats@{get\-Quest\-Stats}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{get\-Quest\-Stats}]{\setlength{\rightskip}{0pt plus 5cm}Level\-Stats Menu\-Designer\-::get\-Quest\-Stats (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_ae7d90855892b5315f15c60ff26dbb262}
+Access Level\-Stats for a given node 
+\begin{DoxyParams}{Parameters}
+{\em i} & the index of the level from which to read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a copy of the seed information about the level 
+\end{DoxyReturn}
+\hypertarget{classMenuDesigner_a55338cb6b43967e2d17714daa5dff4d8}{\index{Menu\-Designer@{Menu\-Designer}!init\-Map@{init\-Map}}
+\index{init\-Map@{init\-Map}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{init\-Map}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Designer\-::init\-Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_a55338cb6b43967e2d17714daa5dff4d8}
+Function to generate a map for the rest of the game to occur on 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMenuDesigner_a73a5d6f98ed1148d58b3a4185683668f}{\index{Menu\-Designer@{Menu\-Designer}!on\-Button\-Click@{on\-Button\-Click}}
+\index{on\-Button\-Click@{on\-Button\-Click}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{on\-Button\-Click}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Designer\-::on\-Button\-Click (
+\begin{DoxyParamCaption}
+\item[{Button}]{btn, }
+\item[{int $\ast$}]{on\-Click\-Func}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_a73a5d6f98ed1148d58b3a4185683668f}
+Function to set a button's on-\/click function 
+\begin{DoxyParams}{Parameters}
+{\em btn} & a pointer to the button to modify \\
+\hline
+{\em on\-Click\-Func} & the function to execute when the mouse clicks on btn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classMenuDesigner_ad6a4d772a6462ceada64550f1c02558b}{\index{Menu\-Designer@{Menu\-Designer}!on\-Button\-Hover@{on\-Button\-Hover}}
+\index{on\-Button\-Hover@{on\-Button\-Hover}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{on\-Button\-Hover}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Designer\-::on\-Button\-Hover (
+\begin{DoxyParamCaption}
+\item[{Button $\ast$}]{btn, }
+\item[{int $\ast$}]{on\-Hover\-Func}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_ad6a4d772a6462ceada64550f1c02558b}
+Function to set a button's on-\/hover function 
+\begin{DoxyParams}{Parameters}
+{\em btn} & a pointer to the button to modify \\
+\hline
+{\em on\-Hover\-Func} & the function to execute when the mouse hovers over btn \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classMenuDesigner_a63784951606d0ec88120c9c47e83462f}{\index{Menu\-Designer@{Menu\-Designer}!render@{render}}
+\index{render@{render}!MenuDesigner@{Menu\-Designer}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Designer\-::render (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMenuDesigner_a63784951606d0ec88120c9c47e83462f}
+Fuction to call the renderer for the current state of the menu 
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+menudesigner.\-h\end{DoxyCompactItemize}
