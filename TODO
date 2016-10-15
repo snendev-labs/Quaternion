@@ -24,7 +24,7 @@
 -write button.cpp
 -write Makefile
 -write LevelStats.cpp
--write Doxyfile
+-write Doxyfile [done]
 
 --FINAL
 -add badguy fire method
