@@ -82,3 +82,4 @@ public:
     */
     void closeTextWindow();
 }
+#endif 
