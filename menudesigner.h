@@ -1,7 +1,8 @@
 #ifndef MENUDESIGNER_H
 #define MENUDESIGNER_H
 #include <vector>
-#include <ctime>
+#include <string>
+#include <algorithm>
 #include "button.h"
 #include "levelstats.cpp"
 using namespace std;
@@ -17,6 +18,12 @@ public:
     vector<TextBox>
     vector<LevelStat> nodeStats;
     map<int,vector<int> > nodeGraph;
+    /**
+        Default constructor, returns a pointer to an empty MenuDesigner object
+        @param void
+        @return a pointer to a new MenuDesigner object
+    */
+    MenuDesigner();
     /**
         Fuction to call the renderer for the current state of the menu
         @param void
@@ -39,14 +46,14 @@ public:
         btn
         @return void
     */
-    void onButtonHover(Button * btn, int (*onHoverFunc));
+    void onButtonHover(Button * btn, void (*onHoverFunc)(void));
     /**
         Function to set a button's on-click function
         @param btn a pointer to the button to modify
         @param onClickFunc the function to execute when the mouse clicks on btn
         @return void
     */
-    void onButtonClick(Button btn, int (*onClickFunc));
+    void onButtonClick(Button btn, void (*onClickFunc)(void));
     /**
         Function to generate a map for the rest of the game to occur on
         @param void
@@ -82,3 +89,4 @@ public:
     */
     void closeTextWindow();
 }
+#endif
