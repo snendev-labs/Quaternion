@@ -1,0 +1,1 @@
+g++ src/badguy.cpp src/bullet.cpp src/shield.cpp src/leveldesigner.cpp src/quaternion.cpp src/quaternionlib.cpp src/goodguy.cpp -o quaternion -lGL -lSDL2 -L/usr/local -std=c++11
