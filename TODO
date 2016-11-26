@@ -13,10 +13,18 @@
 -split render and move direction [done]
 -add ship controls [SDL] <--- I'm here -GS
  
-
 -add bullet [done]
 -add auto fire [done]
 -add bullet kill method [done]
+
+--HOUSEKEEPING
+-finish documenting menudesigner.h [done]
+-add button.h
+-write menudesigner.cpp
+-write button.cpp
+-write Makefile
+-write LevelStats.cpp
+-write Doxyfile [done]
 
 --FINAL
 -add badguy fire method
@@ -35,13 +43,6 @@ FOR SEAN:
 --TO COMPILE
 
 --LINUX
--if in directory containing all souce files
-$ g++ badguy.cpp bullet.cpp shield.cpp leveldesigner.cpp quaternion.cpp quaternionlib.cpp goodguy.cpp -o quaternion -lGL -lGLU -lglut -L/usr/local -std=c++11
-
-OR
-
--if using makefile
 $ make
 
---FOR WEBGL (specific directory)
-$ make with Makefile_webGL
+
