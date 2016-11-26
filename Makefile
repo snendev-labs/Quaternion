@@ -16,4 +16,4 @@ $(EXEDIR)/quaternion: $(OBJS)
 	$(CC) $^ -o $@ $(CPPFLAGS)
 
 clean:
-	$(RM) *.o build/*.o quaternion
+	$(RM) *.o $(ODIR)/*.o $(EXEDIR)/quaternion
