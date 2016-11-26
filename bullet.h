@@ -93,7 +93,7 @@ public:
 
     void circlemove(double d, double sx, double sy, double sv, double sdir);
 
-    // TODO replace
+    // TODO replace with opengl2
     void shittyrender(double x);
 };
 #endif
