@@ -29,7 +29,7 @@ void initdisplay()
 void ev_handler(SDL_Event *event, int *gameover){
     switch((*event).type) {
         case SDL_KEYDOWN:
-            cout << "Key down..." << (char) (*event).key.keysym.sym << endl;   
+            cout << "Key down..." << (char) (*event).key.keysym.sym << endl;
             switch((*event).key.keysym.sym) {
                 case SDLK_UP:
                     ld.setDirection(1,true);
@@ -49,7 +49,7 @@ void ev_handler(SDL_Event *event, int *gameover){
                 case SDLK_w:
                     ld.setDirection(1,true);
                     break;
-                case SDLK_a: 
+                case SDLK_a:
                     ld.setDirection(2,true);
                     break;
                 case SDLK_s:
@@ -85,7 +85,7 @@ void ev_handler(SDL_Event *event, int *gameover){
             }
             break;
        case SDL_KEYUP:
-            cout << "Key up..." << (char) (*event).key.keysym.sym << endl;  
+            cout << "Key up..." << (char) (*event).key.keysym.sym << endl;
             switch((*event).key.keysym.sym) {
                 case SDLK_UP:
                     ld.setDirection(1,false);
@@ -102,7 +102,7 @@ void ev_handler(SDL_Event *event, int *gameover){
                 case SDLK_w:
                     ld.setDirection(1,false);
                     break;
-                case SDLK_a: 
+                case SDLK_a:
                     ld.setDirection(2,false);
                     break;
                 case SDLK_s:
