@@ -37,7 +37,6 @@ FOR SEAN:
 -shader
 -bullet reload speed should be type-dependent
 
-
 NOTES:
 -all stepsizes are 100.0 for test purposes
 

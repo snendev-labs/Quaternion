@@ -15,19 +15,19 @@ Bullet::Bullet(double x,double y, double theta, double hp, int t) {
     maxhp=hp;
     type=t;
     if(t == 0){
-      stepsize=60.0;
+      stepsize=100.0;
     } else if (t == 1){
-      stepsize=40.0;
+      stepsize=100.0;
     } else if (t == 2){
-      stepsize=40.0;
+      stepsize=100.0;
     } else if (t == 3){
-      stepsize=35.0;
+      stepsize=100.0;
     } else if (t == 4){
-      stepsize=40.0;
+      stepsize=100.0;
     } else if (t == 5){
-      stepsize=30.0;
+      stepsize=100.0;
     } else if (t == 6){
-      stepsize=30.0;
+      stepsize=100.0;
     }
 }
 double Bullet::x() {
@@ -83,22 +83,22 @@ void Bullet::circlelazymove(double d, double shipx, double shipy){
     forwardmove(d);
 }
 
-void Bullet::circlemove(double d, double shipx, double shipy, double shipv, double shipdir){
+void Bullet::circlemove(double d, double shipx, double shipy, double shipv, double shipdir, bool moving){
     double dx = bulletx-shipx;
     double dy = bullety-shipy;
-    double tmp;
-    if(dx >= 0 && dy >= 0){ //Quad 1
-        tmp = atan(dy/dx) + M_PI/2;
-    } else if(dx < 0 && dy >= 0){ //Quad 2
-        tmp = atan(dy/dx) + 3*M_PI/2;
-    } else if(dx < 0 && dy < 0){ //Quad 3
-        tmp = atan(dy/dx) - M_PI/2;
-    } else {
-        tmp = atan(dy/dx) + M_PI/2;
+    if(dx >= 0 && dy >= 0){ //Quadrant 1
+        direction = atan(dy/dx) + M_PI/2;
+    } else if(dx < 0 && dy >= 0){ //Q2
+        direction = atan(dy/dx) + 3*M_PI/2;
+    } else if(dx < 0 && dy < 0){ //Q3
+        direction = atan(dy/dx) - M_PI/2;
+    } else { //Q4
+        direction = atan(dy/dx) + M_PI/2;
     }
-    direction = tmp;
-    bulletx+=shipv*cos(shipdir)*d/60.0;
-    bullety+=shipv*sin(shipdir)*d/60.0;
+    if(moving){
+      bulletx+=shipv*cos(shipdir)*d/60.0;
+      bullety+=shipv*sin(shipdir)*d/60.0;
+    }
     forwardmove(d);
 }
 

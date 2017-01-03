@@ -75,7 +75,7 @@ public:
     /**
         Function to add a text window to the menu
         @param x1 the x coordinate of the top left corner of the text box
-        @param y1 the y coordinate of the top left corner of the tect box
+        @param y1 the y coordinate of the top left corner of the text box
         @param x2 the x coordinate of the bottom right corner of the text box
         @param y2 the y coordinate of the bottom right corner of the text box
         @param text the text displayed on the test box

@@ -12,7 +12,7 @@ Badguy::Badguy() {
     shipy=0.0;
     direction=1.5*M_PI; // in radians
     sightdistance=.25;
-    stepsize=25.0;
+    stepsize=100.0;
     pixsize=.0025;
     hitradius=6*pixsize;
     isAlive=true;

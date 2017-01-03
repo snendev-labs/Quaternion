@@ -38,7 +38,7 @@ void LevelDesigner::begin() {
     readyFire=0;
     autoFire=0;
     goodguydirection=0;
-    goodguyFireRate=4.0;
+    goodguyFireRate=10.0;
     timeSinceLastGoodguyFire=0.0;
 }
 void LevelDesigner::notes() {
@@ -51,6 +51,7 @@ void LevelDesigner::notes() {
 void LevelDesigner::step() {
     currenttime=clock();
     deltatime=double(currenttime-lasttime)/CLOCKS_PER_SEC;
+    cout << "dTime: " << deltatime << endl;
     lasttime=currenttime;
     if(!paused){
         if(onResetStage) {
@@ -149,26 +150,26 @@ void LevelDesigner::step() {
         // GOODGUY BULLETS
         timeSinceLastGoodguyFire+=deltatime;
         if(timeSinceLastGoodguyFire>1.0/goodguyFireRate && (readyFire == 1 || autoFire == 1)) {
-            Bullet * temp;
+            Bullet * newbullet;
             if(equippedBullet == 4){ //shotgun
-                temp=new Bullet(goodguy->x(),goodguy->y(),goodguy->getDirection(), 0.3, equippedBullet);
-                goodguybullets->push_back(temp);
-                temp=new Bullet(goodguy->x(),goodguy->y(),goodguy->getDirection()-0.5, 0.3, equippedBullet);
-                goodguybullets->push_back(temp);
-                temp=new Bullet(goodguy->x(),goodguy->y(),goodguy->getDirection()+0.5, 0.3, equippedBullet);
-                goodguybullets->push_back(temp);
+                newbullet=new Bullet(goodguy->x(),goodguy->y(),goodguy->getDirection(), 0.3, equippedBullet);
+                goodguybullets->push_back(newbullet);
+                newbullet=new Bullet(goodguy->x(),goodguy->y(),goodguy->getDirection()-0.5, 0.3, equippedBullet);
+                goodguybullets->push_back(newbullet);
+                newbullet=new Bullet(goodguy->x(),goodguy->y(),goodguy->getDirection()+0.5, 0.3, equippedBullet);
+                goodguybullets->push_back(newbullet);
             } else if(equippedBullet == 5 || equippedBullet == 6){ //circle
-                temp=new Bullet(goodguy->x()+0.1,goodguy->y()+0.1,goodguy->getDirection(),0.5, equippedBullet);
-                goodguybullets->push_back(temp);
-                temp=new Bullet(goodguy->x()-0.1,goodguy->y()+0.1,goodguy->getDirection(),0.5, equippedBullet);
-                goodguybullets->push_back(temp);
-                temp=new Bullet(goodguy->x()+0.1,goodguy->y()-0.1,goodguy->getDirection(),0.5, equippedBullet);
-                goodguybullets->push_back(temp);
-                temp=new Bullet(goodguy->x()-0.1,goodguy->y()-0.1,goodguy->getDirection(),0.5, equippedBullet);
-                goodguybullets->push_back(temp);
+                newbullet=new Bullet(goodguy->x()+0.1,goodguy->y()+0.1,goodguy->getDirection(),0.5, equippedBullet);
+                goodguybullets->push_back(newbullet);
+                newbullet=new Bullet(goodguy->x()-0.1,goodguy->y()+0.1,goodguy->getDirection(),0.5, equippedBullet);
+                goodguybullets->push_back(newbullet);
+                newbullet=new Bullet(goodguy->x()+0.1,goodguy->y()-0.1,goodguy->getDirection(),0.5, equippedBullet);
+                goodguybullets->push_back(newbullet);
+                newbullet=new Bullet(goodguy->x()-0.1,goodguy->y()-0.1,goodguy->getDirection(),0.5, equippedBullet);
+                goodguybullets->push_back(newbullet);
             } else {
-                temp=new Bullet(goodguy->x(),goodguy->y(),goodguy->getDirection(), 5.0, equippedBullet);
-                goodguybullets->push_back(temp);
+                newbullet=new Bullet(goodguy->x(),goodguy->y(),goodguy->getDirection(), 5.0, equippedBullet);
+                goodguybullets->push_back(newbullet);
             }
             timeSinceLastGoodguyFire=0.0;
         }
@@ -182,7 +183,7 @@ void LevelDesigner::step() {
             } else if((*goodguybullets)[k]->type == 3){
                 (*goodguybullets)[k]->wandermove(deltatime);
             } else if((*goodguybullets)[k]->type == 5){
-                (*goodguybullets)[k]->circlemove(deltatime, goodguy->x(), goodguy->y(), goodguy->stepsize, goodguy->moveDirection);
+                (*goodguybullets)[k]->circlemove(deltatime, goodguy->x(), goodguy->y(), goodguy->stepsize, goodguy->moveDirection, goodguy->tomove);
             } else if((*goodguybullets)[k]->type == 6){
                 (*goodguybullets)[k]->circlelazymove(deltatime, goodguy->x(), goodguy->y());
             }
@@ -456,10 +457,3 @@ void LevelDesigner::summonShield(){
     shieldUp = 1;
     shield = new Shield(goodguy->x(), goodguy->y()+dist, w, h, dur);
 }
-
-
-
-
-
-
-

@@ -91,7 +91,7 @@ public:
     */
     void circlelazymove(double d, double sx, double sy);
 
-    void circlemove(double d, double sx, double sy, double sv, double sdir);
+    void circlemove(double d, double sx, double sy, double sv, double sdir, bool moving);
 
     // TODO replace
     void shittyrender(double x);
