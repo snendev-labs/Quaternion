@@ -13,6 +13,10 @@
 #include "leveldesigner.h"
 #include "shield.h"
 using namespace std;
+#define DIRECTION_UP (1)
+#define DIRECTION_LEFT (2)
+#define DIRECTION_DOWN (3)
+#define DIRECTION_RIGHT (4)
 // SPRITE HOLDERS
 LevelDesigner ld;
 //SDL SHIT
@@ -32,31 +36,31 @@ void ev_handler(SDL_Event *event, int *gameover){
             cout << "Key down..." << (char) (*event).key.keysym.sym << endl;
             switch((*event).key.keysym.sym) {
                 case SDLK_UP:
-                    ld.setDirection(1,true);
-                    break;
-                case SDLK_DOWN:
-                    ld.setDirection(2,true);
+                    ld.setDirection(DIRECTION_UP,true);
                     break;
                 case SDLK_LEFT:
-                    ld.setDirection(3,true);
+                    ld.setDirection(DIRECTION_LEFT,true);
+                    break;
+                case SDLK_DOWN:
+                    ld.setDirection(DIRECTION_DOWN,true);
                     break;
                 case SDLK_RIGHT:
-                    ld.setDirection(4,true);
+                    ld.setDirection(DIRECTION_RIGHT,true);
                     break;
                 case SDLK_r:
                     ld.resetStage();
                     break;
                 case SDLK_w:
-                    ld.setDirection(1,true);
+                    ld.setDirection(DIRECTION_UP,true);
                     break;
                 case SDLK_a:
-                    ld.setDirection(2,true);
+                    ld.setDirection(DIRECTION_LEFT,true);
                     break;
                 case SDLK_s:
-                    ld.setDirection(3,true);
+                    ld.setDirection(DIRECTION_DOWN,true);
                     break;
                 case SDLK_d:
-                    ld.setDirection(4,true);
+                    ld.setDirection(DIRECTION_RIGHT,true);
                     break;
                 case SDLK_e:
                     ld.changeBulletNext();
@@ -88,28 +92,28 @@ void ev_handler(SDL_Event *event, int *gameover){
             cout << "Key up..." << (char) (*event).key.keysym.sym << endl;
             switch((*event).key.keysym.sym) {
                 case SDLK_UP:
-                    ld.setDirection(1,false);
+                    ld.setDirection(DIRECTION_UP,false);
                     break;
                 case SDLK_DOWN:
-                    ld.setDirection(2,false);
+                    ld.setDirection(DIRECTION_DOWN,false);
                     break;
                 case SDLK_LEFT:
-                    ld.setDirection(3,false);
+                    ld.setDirection(DIRECTION_LEFT,false);
                     break;
                 case SDLK_RIGHT:
-                    ld.setDirection(4,false);
+                    ld.setDirection(DIRECTION_RIGHT,false);
                     break;
                 case SDLK_w:
-                    ld.setDirection(1,false);
+                    ld.setDirection(DIRECTION_UP,false);
                     break;
                 case SDLK_a:
-                    ld.setDirection(2,false);
+                    ld.setDirection(DIRECTION_LEFT,false);
                     break;
                 case SDLK_s:
-                    ld.setDirection(3,false);
+                    ld.setDirection(DIRECTION_DOWN,false);
                     break;
                 case SDLK_d:
-                    ld.setDirection(4,false);
+                    ld.setDirection(DIRECTION_RIGHT,false);
                     break;
                 case SDLK_SPACE:
                     ld.readyFire = 0;

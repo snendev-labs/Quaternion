@@ -10,7 +10,7 @@ Goodguy::Goodguy() {
     renderDirection=.5*M_PI; // in radians
     moveDirection=.5*M_PI; // in radians
     stepsize=100;
-    pixsize=.0025;expected
+    pixsize=.0025; // expected
     onup=false;
     ondown=false;
     onleft=false;
