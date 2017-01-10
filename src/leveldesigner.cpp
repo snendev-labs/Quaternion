@@ -357,7 +357,7 @@ vector<vector<vector<double>>> LevelDesigner::monoColorizeShipDesign(vector<vect
     for(int k=0;k<toret.size();k++) {
         for(int k1=0;k1<toret[k].size();k1++) {
             for(int k2=0;k2<toret[k][k1].size();k2++) {
-                toret[k][k1][k2]=0.10+0.9*toret[k][k1][k2]/100.0;
+                toret[k][k1][k2]=0.10+1.9*toret[k][k1][k2]/100.0;
             }
         }
     }
